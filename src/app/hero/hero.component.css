@@ -448,7 +448,10 @@
 
 @media (max-width: 480px) {
   .accenture-hero {
-    padding: 100px 0 60px;
+    padding: 26px 0 60px;
+    /* Reduced from 100px */
+    align-items: flex-start;
+    /* Prevent vertical centering to reduce top gap */
   }
 
   .hero-container {
