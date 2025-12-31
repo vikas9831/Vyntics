@@ -1,7 +1,7 @@
 # Our Clients Component
 
 ## Overview
-The Our Clients component has been successfully added to the NexDataDynamics project. This component displays a list of client companies with their logos, industry information, and descriptions.
+The Our Clients component has been successfully added to the VYNTICS project. This component displays a list of client companies with their logos, industry information, and descriptions.
 
 ## Features
 - **Client Cards**: Each client is displayed in an attractive card format
