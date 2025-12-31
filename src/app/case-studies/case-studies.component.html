@@ -1,0 +1,57 @@
+<section id="case-studies" class="case-studies-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Success Stories</h2>
+      <p class="section-subtitle">Real results from real clients - discover how we've helped businesses achieve their transformation goals</p>
+    </div>
+    
+    <div class="case-studies-grid">
+      <div class="case-study-card" *ngFor="let caseStudy of caseStudies">
+        <div class="case-study-image">
+          <div class="industry-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" [innerHTML]="caseStudy.icon">
+            </svg>
+          </div>
+          <div class="industry-badge">{{ caseStudy.industry }}</div>
+        </div>
+        
+        <div class="case-study-content">
+          <h3 class="case-study-title">{{ caseStudy.title }}</h3>
+          <p class="case-study-description">{{ caseStudy.description }}</p>
+          
+          <div class="case-study-challenge">
+            <h4>Challenge</h4>
+            <p>{{ caseStudy.challenge }}</p>
+          </div>
+          
+          <div class="case-study-solution">
+            <h4>Solution</h4>
+            <ul>
+              <li *ngFor="let solution of caseStudy.solutions">{{ solution }}</li>
+            </ul>
+          </div>
+          
+          <div class="case-study-results">
+            <h4>Results</h4>
+            <div class="results-grid">
+              <div class="result-item" *ngFor="let result of caseStudy.results">
+                <div class="result-metric">{{ result.metric }}</div>
+                <div class="result-description">{{ result.description }}</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="case-study-tags">
+            <span class="tag" *ngFor="let tag of caseStudy.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <h3>Ready to Create Your Success Story?</h3>
+      <p>Join the ranks of successful businesses that have transformed their operations with our expertise.</p>
+      <button class="cta-button" (click)="getStarted()">Start Your Journey</button>
+    </div>
+  </div>
+</section>

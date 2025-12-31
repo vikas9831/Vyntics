@@ -1,0 +1,67 @@
+<section id="hero" class="accenture-hero">
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      <source src="https://videos.pexels.com/video-files/2278095/2278095-uhd_3840_2160_30fps.mp4" type="video/mp4">
+      <!-- Fallback for unsupported browsers -->
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+  
+  <!-- Image Carousel Background -->
+  <div class="image-carousel-background">
+    <div 
+      *ngFor="let image of backgroundImages; let i = index" 
+      class="carousel-image" 
+      [class.active]="currentImageIndex === i"
+      [style.background-image]="'url(' + image.url + ')'">
+    </div>
+    <div class="image-overlay"></div>
+  </div>
+  
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-text">Innovation • Intelligence • Impact</span>
+      </div>
+      
+      <h1 class="hero-headline">
+        Transform Your Data Into
+        <span class="highlight-text">Intelligent Solutions</span>
+      </h1>
+      
+      <p class="hero-description">
+        We empower enterprises with cutting-edge Data Engineering, Analytics, and Agentic AI solutions 
+        that drive measurable results and accelerate digital transformation.
+      </p>
+      
+      <div class="hero-actions">
+        <button class="primary-cta" (click)="scrollToSection('our-services')">
+          <span>Explore Our Services</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="secondary-cta" (click)="scrollToSection('contact-us')">
+          <span>Start Your Journey</span>
+        </button>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">25+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Global Support</span>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>

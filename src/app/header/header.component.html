@@ -1,0 +1,35 @@
+<header class="accenture-header">
+  <div class="header-container">
+    <div class="logo-section">
+      <div class="logo">
+        <span class="logo-text">NexDataDynamics</span>
+      </div>
+    </div>
+    
+    <nav class="main-navigation" [class.mobile-open]="isMobileMenuOpen">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="#hero" class="nav-link" (click)="scrollToSection($event, 'hero')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about-us" class="nav-link" (click)="navigateToAboutUs()">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#why-choose-us" class="nav-link" (click)="scrollToSection($event, 'why-choose-us')">Why Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="#our-services" class="nav-link" (click)="scrollToSection($event, 'our-services')">Services</a>
+        </li>
+        <li class="nav-item cta-item">
+          <a href="#contact-us" class="nav-link cta-link" (click)="scrollToSection($event, 'contact-us')">Get Started</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-menu-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
