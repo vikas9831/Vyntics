@@ -3,26 +3,25 @@
     <div class="section-header">
       <p class="section-subtitle">TESTIMONIALS</p>
       <h2 class="section-title">Our Customer <span class="highlight">Says!</span></h2>
-      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adip elit. Donec posuere dolor massa, pellentesque aliquam nislon</p>
+      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adip elit. Donec posuere dolor massa,
+        pellentesque aliquam nislon</p>
     </div>
-    
+
     <div class="testimonials-carousel">
       <div class="carousel-container">
-        <div class="testimonial-slide" 
-             *ngFor="let testimonial of testimonials; let i = index"
-             [class.active]="i === currentSlide"
-             [class.prev]="i === getPreviousSlide()"
-             [class.next]="i === getNextSlide()">
+        <div class="testimonial-slide" *ngFor="let testimonial of testimonials; let i = index"
+          [class.active]="i === currentSlide" [class.prev]="i === getPreviousSlide()"
+          [class.next]="i === getNextSlide()">
           <div class="testimonial-card">
             <div class="rating">
               <span class="star filled" *ngFor="let star of getStarsArray(testimonial.rating)">★</span>
               <span class="star empty" *ngFor="let star of getEmptyStars(testimonial.rating)">☆</span>
             </div>
-            
+
             <div class="testimonial-content">
               <p class="testimonial-text">{{ testimonial.text }}</p>
             </div>
-            
+
             <div class="author-section">
               <div class="author-avatar">
                 <img *ngIf="testimonial.photo" [src]="testimonial.photo" [alt]="testimonial.author" />
@@ -38,25 +37,25 @@
           </div>
         </div>
       </div>
-      
-      <div class="carousel-navigation">
+
+      <div class="carousel-navigation" *ngIf="testimonials.length > 1">
         <button class="nav-btn prev-btn" (click)="previousSlide()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </button>
-        
+
         <div class="nav-dots">
-          <span class="dot" 
-                *ngFor="let dot of getPaginationDots(); let i = index" 
-                [class.active]="i === currentSlide"
-                (click)="goToSlide(i)">
+          <span class="dot" *ngFor="let dot of getPaginationDots(); let i = index" [class.active]="i === currentSlide"
+            (click)="goToSlide(i)">
           </span>
         </div>
-        
+
         <button class="nav-btn next-btn" (click)="nextSlide()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </button>
       </div>

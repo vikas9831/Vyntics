@@ -151,11 +151,11 @@
   .header-container {
     padding: 0 40px;
   }
-  
+
   .nav-links {
     gap: 32px;
   }
-  
+
   .logo-text {
     font-size: 19px;
   }
@@ -166,11 +166,11 @@
     padding: 0 30px;
     height: 70px;
   }
-  
+
   .logo-text {
     font-size: 18px;
   }
-  
+
   .main-navigation {
     position: fixed;
     top: 70px;
@@ -185,29 +185,29 @@
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
-  
+
   .main-navigation.mobile-open {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  
+
   .nav-links {
     flex-direction: column;
     gap: 0;
     padding: 20px 30px;
     width: 100%;
   }
-  
+
   .nav-item {
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   }
-  
+
   .nav-item:last-child {
     border-bottom: none;
   }
-  
+
   .nav-link {
     display: block;
     padding: 16px 0;
@@ -215,11 +215,11 @@
     font-size: 17px;
     color: #1d1d1f;
   }
-  
+
   .nav-link::after {
     display: none;
   }
-  
+
   .cta-item .cta-link {
     background: #0071e3;
     margin-top: 16px;
@@ -232,7 +232,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .mobile-menu-toggle {
     display: flex;
   }
@@ -243,24 +243,24 @@
     padding: 0 20px;
     height: 60px;
   }
-  
+
   .logo-text {
     font-size: 17px;
   }
-  
+
   .main-navigation {
     top: 60px;
   }
-  
+
   .nav-links {
     padding: 16px 20px;
   }
-  
+
   .nav-link {
     padding: 14px 0;
     font-size: 16px;
   }
-  
+
   .cta-item .cta-link {
     padding: 10px 18px;
     font-size: 16px;
@@ -268,19 +268,4 @@
   }
 }
 
-/* Page offset for fixed header */
-body {
-  padding-top: 80px;
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-top: 70px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding-top: 60px;
-  }
-}
+/* Page offset for fixed header moved to global styles.css */

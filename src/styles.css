@@ -17,7 +17,7 @@
   --neutral-700: #4b5563;
   --neutral-800: #374151;
   --neutral-900: #1f2937;
-  
+
   /* Typography Scale */
   --text-xs: 12px;
   --text-sm: 14px;
@@ -29,7 +29,7 @@
   --text-4xl: 36px;
   --text-5xl: 48px;
   --text-6xl: 60px;
-  
+
   /* Spacing */
   --space-xs: 4px;
   --space-sm: 8px;
@@ -38,7 +38,7 @@
   --space-xl: 32px;
   --space-2xl: 48px;
   --space-3xl: 64px;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -66,10 +66,35 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px;
+  /* Offset for fixed header */
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   color: var(--primary-dark);
@@ -190,6 +215,7 @@ button {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -217,19 +243,19 @@ button {
   .container {
     padding: 0 var(--space-lg);
   }
-  
+
   h1 {
     font-size: var(--text-4xl);
   }
-  
+
   h2 {
     font-size: var(--text-3xl);
   }
-  
+
   h3 {
     font-size: var(--text-2xl);
   }
-  
+
   .section-padding {
     padding: var(--space-2xl) 0;
   }
@@ -239,19 +265,19 @@ button {
   .container {
     padding: 0 var(--space-md);
   }
-  
+
   h1 {
     font-size: var(--text-3xl);
   }
-  
+
   h2 {
     font-size: var(--text-2xl);
   }
-  
+
   h3 {
     font-size: var(--text-xl);
   }
-  
+
   html {
     font-size: 14px;
   }
@@ -261,19 +287,22 @@ button {
   .container {
     padding: 0 var(--space-sm);
   }
-  
+
   html {
     font-size: 13px;
   }
 }
 
 /* Prevent horizontal overflow */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
-img, video, iframe {
+img,
+video,
+iframe {
   max-width: 100%;
   height: auto;
 }

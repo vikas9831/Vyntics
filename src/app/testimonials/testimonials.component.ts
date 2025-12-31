@@ -20,58 +20,13 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
 
   testimonials: Testimonial[] = [
     {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "Samantha William",
-      title: "Help us improve our productivity",
-      role: "Senior Designer",
-      company: "Design Studio",
+      text: "Arun and his Vyntics team have been nothing short of phenomenal. From the very first interview, I knew Arun was the perfect match to build our database. Arun has a curious nature and problem-solving mindset, it is evident he truly loves working with data. Along with his technical skills, this made him uniquely capable of tackling the challenges our company struggled with. Arun is timely, fair, and honest. He built our database far beyond what we could do and he did it within our budget constraints. His dedication and expertise exceeded every expectation. Arun and his team will be an ongoing resource for us; I couldn’t be more pleased to recommend this team for your data needs.",
+      author: "Mona McCormick",
+      title: "Phenomenal Service",
+      role: "Business & Royalty Analytics",
+      company: "SMGQ Law",
       rating: 5,
-      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&crop=face"
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "Michael Chen",
-      title: "Transform our business operations",
-      role: "Product Manager",
-      company: "Tech Solutions",
-      rating: 5,
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=400&fit=crop&crop=face"
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "Sarah Johnson",
-      title: "Exceeded all expectations",
-      role: "Creative Director",
-      company: "Innovation Labs",
-      rating: 5,
-      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=400&fit=crop&crop=face"
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "David Rodriguez",
-      title: "Outstanding service quality",
-      role: "CEO",
-      company: "Startup Ventures",
-      rating: 5,
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=face"
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "Emily Thompson",
-      title: "Professional and reliable",
-      role: "Marketing Director",
-      company: "Global Solutions",
-      rating: 5,
-      photo: "https://images.unsplash.com/photo-1494790108755-2616b332446c?w=600&h=400&fit=crop&crop=face"
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      author: "James Wilson",
-      title: "Exceeded our expectations",
-      role: "CTO",
-      company: "Tech Innovations",
-      rating: 5,
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=400&fit=crop&crop=face"
+      photo: "assets/smgq.jpg"
     }
   ];
 
@@ -91,10 +46,12 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
   }
 
   getPreviousSlide(): number {
+    if (this.testimonials.length <= 1) return -1;
     return this.currentSlide === 0 ? this.testimonials.length - 1 : this.currentSlide - 1;
   }
 
   getNextSlide(): number {
+    if (this.testimonials.length <= 1) return -1;
     return this.currentSlide === this.testimonials.length - 1 ? 0 : this.currentSlide + 1;
   }
 
