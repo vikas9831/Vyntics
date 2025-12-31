@@ -4,23 +4,23 @@
     <div class="section-header">
       <h2 class="section-title">Our Clients</h2>
       <p class="section-subtitle">
-        Forward-thinking brands trust VYNTICS to drive scalable growth and engagement. We partner with companies ready to embrace the future of digital transformation.
+        Forward-thinking brands trust VYNTICS to drive scalable growth and engagement. We partner with companies ready
+        to embrace the future of digital transformation.
       </p>
-                </div>
-            
-            <!-- Separator Line -->
-            <div class="separator"></div>
-            
-            <!-- Clients Grid -->
-            <div class="clients-grid">
+    </div>
+
+    <!-- Separator Line -->
+    <div class="separator"></div>
+
+    <!-- Clients Grid -->
+    <div class="clients-grid">
       <div class="client-card" *ngFor="let client of clients">
         <div class="client-logo">
-          <img [src]="client.logo" [alt]="client.name + ' logo'" class="logo-image" (error)="onLogoError($event, client)">
+          <img [src]="client.logo" [alt]="client.name + ' logo'" class="logo-image"
+            (error)="onLogoError($event, client)">
         </div>
-        <div class="client-info">
-          <h3 class="client-name">{{ client.name }}</h3>
-        </div>
+
       </div>
     </div>
   </div>
-</section> 
+</section>

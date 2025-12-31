@@ -120,8 +120,9 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 12px;
-  width: 60px;
-  height: 60px;
+  width: 250px;
+  /* Increased size significantly */
+  height: 250px;
   background: transparent;
   border: none;
   transition: all 0.3s ease;
@@ -134,8 +135,11 @@
 .logo-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 0;
+  object-fit: cover;
+  object-fit: cover;
+  /* Changed to cover for photo */
+  border-radius: 50%;
+  /* Make it circular */
   background: transparent;
   padding: 0;
   transition: all 0.3s ease;
@@ -151,8 +155,8 @@
 }
 
 .client-name {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   color: #333333;
   margin-bottom: 4px;
   line-height: 1.2;
@@ -179,24 +183,25 @@
   .container {
     padding: 0 30px;
   }
-  
+
   .clients-grid {
     gap: 50px;
   }
-  
+
   .client-logo {
-    width: 50px;
-    height: 50px;
+    width: 200px;
+    /* Adjusted for tablets */
+    height: 200px;
   }
 
   .client-name {
     font-size: 14px;
   }
-  
+
   .section-title {
     font-size: 48px;
   }
-  
+
   .section-subtitle {
     font-size: 18px;
   }
@@ -206,29 +211,29 @@
   .our-clients-section {
     padding: 100px 0 80px;
   }
-  
+
   .container {
     padding: 0 25px;
   }
-  
+
   .section-header {
     margin-bottom: 50px;
   }
-  
+
   .section-title {
     font-size: 40px;
     margin-bottom: 16px;
   }
-  
+
   .section-subtitle {
     font-size: 17px;
   }
-  
+
   .clients-grid {
     gap: 40px;
     flex-wrap: wrap;
   }
-  
+
   .client-card {
     min-height: 70px;
   }
@@ -238,9 +243,10 @@
   }
 
   .client-logo {
-    width: 45px;
-    height: 45px;
-    margin-bottom: 10px;
+    width: 180px;
+    /* Adjusted for smaller tablets/phones */
+    height: 180px;
+    margin-bottom: 20px;
   }
 }
 
@@ -248,23 +254,23 @@
   .our-clients-section {
     padding: 80px 0 60px;
   }
-  
+
   .container {
     padding: 0 20px;
   }
-  
+
   .section-title {
     font-size: 36px;
   }
-  
+
   .section-subtitle {
     font-size: 16px;
   }
-  
+
   .clients-grid {
     gap: 30px;
   }
-  
+
   .client-card {
     min-height: 60px;
   }
@@ -274,8 +280,9 @@
   }
 
   .client-logo {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 8px;
+    width: 150px;
+    /* Adjusted for mobile */
+    height: 150px;
+    margin-bottom: 20px;
   }
-} 
+}

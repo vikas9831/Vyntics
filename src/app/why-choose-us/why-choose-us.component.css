@@ -198,8 +198,10 @@
 
 .carousel-container {
   position: relative;
-  height: 600px;
-  overflow: hidden;
+  height: 800px;
+  /* Increased from 600px to prevent desktop clipping */
+  overflow: visible;
+  /* Allow content to be seen if it slightly exceeds */
 }
 
 .feature-slide {
@@ -494,8 +496,10 @@
   }
 
   .carousel-container {
-    height: auto;
-    min-height: 600px;
+    height: 900px;
+    /* Force height because children are absolute */
+    min-height: 900px;
+    align-items: flex-start;
   }
 
   .slide-image {
@@ -519,6 +523,13 @@
   .feature-metrics {
     justify-content: center;
     gap: 30px;
+  }
+
+  .feature-description {
+    margin: 0 auto 30px auto;
+    /* Center the description block */
+    text-align: center;
+    /* Ensure text is centered */
   }
 
   .statistics-section {
