@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nexdatadynamics": {
+    "vyntics": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nexdatadynamics",
+            "outputPath": "dist/vyntics",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -22,7 +22,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
@@ -40,11 +41,18 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
             },
             "development": {
               "buildOptimizer": false,
@@ -61,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nexdatadynamics:build:production"
+              "browserTarget": "vyntics:build:production"
             },
             "development": {
-              "browserTarget": "nexdatadynamics:build:development"
+              "browserTarget": "vyntics:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nexdatadynamics:build"
+            "browserTarget": "vyntics:build"
           }
         },
         "test": {

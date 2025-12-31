@@ -1,4 +1,4 @@
-# Email Setup Guide for NexDataDynamics Contact Form
+# Email Setup Guide for VYNTICS Contact Form
 
 This guide will help you configure EmailJS to enable email functionality in your contact form. When users submit the form, emails will be sent directly to `vikassharma9831@gmail.com`.
 
@@ -17,7 +17,7 @@ This guide will help you configure EmailJS to enable email functionality in your
    - Click "Connect Account"
    - Log in with `vikassharma9831@gmail.com`
    - Grant necessary permissions
-4. Give your service a name (e.g., "NexDataDynamics Contact")
+4. Give your service a name (e.g., "VYNTICS Contact")
 5. Copy the **Service ID** (you'll need this later)
 
 ## Step 3: Create Email Template
@@ -41,7 +41,7 @@ This guide will help you configure EmailJS to enable email functionality in your
 ```
 
 ### Important Template Settings:
-- **From Name**: Leave this as your default (NexDataDynamics or your preferred name)
+- **From Name**: Leave this as your default (VYNTICS or your preferred name)
 - **From Email**: This will be vikassharma9831@gmail.com (your authenticated email)
 - **Reply To**: `{{reply_to}}` (This ensures when you reply, it goes to the sender)
 
@@ -127,7 +127,7 @@ services for my e-commerce business. Could we schedule a call
 to discuss my requirements?
 
 ============================
-This email was sent from the NexDataDynamics contact form.
+This email was sent from the VYNTICS contact form.
 Please reply directly to this email to respond to John.
 ```
 
