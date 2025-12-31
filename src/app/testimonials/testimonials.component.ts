@@ -46,12 +46,12 @@ export class TestimonialsComponent implements OnInit, OnDestroy {
   }
 
   getPreviousSlide(): number {
-    if (this.testimonials.length <= 1) return -1;
+    if (this.testimonials.length <= 1) return 0;
     return this.currentSlide === 0 ? this.testimonials.length - 1 : this.currentSlide - 1;
   }
 
   getNextSlide(): number {
-    if (this.testimonials.length <= 1) return -1;
+    if (this.testimonials.length <= 1) return 0;
     return this.currentSlide === this.testimonials.length - 1 ? 0 : this.currentSlide + 1;
   }
 

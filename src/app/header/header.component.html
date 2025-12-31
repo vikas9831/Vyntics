@@ -2,10 +2,11 @@
   <div class="header-container">
     <div class="logo-section">
       <div class="logo">
+        <img src="assets/logo.jpeg" alt="Vyntics Logo" class="logo-image">
         <span class="logo-text">VYNTICS</span>
       </div>
     </div>
-    
+
     <nav class="main-navigation" [class.mobile-open]="isMobileMenuOpen">
       <ul class="nav-links">
         <li class="nav-item">
@@ -21,11 +22,12 @@
           <a href="#our-services" class="nav-link" (click)="scrollToSection($event, 'our-services')">Services</a>
         </li>
         <li class="nav-item cta-item">
-          <a href="#contact-us" class="nav-link cta-link" (click)="scrollToSection($event, 'contact-us')">Get Started</a>
+          <a href="#contact-us" class="nav-link cta-link" (click)="scrollToSection($event, 'contact-us')">Get
+            Started</a>
         </li>
       </ul>
     </nav>
-    
+
     <div class="mobile-menu-toggle" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
       <span></span>
       <span></span>

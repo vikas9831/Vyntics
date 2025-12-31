@@ -442,9 +442,9 @@
 
 .stat-item:hover {
   background: #ffffff;
-  border-color: #1d1d1f;
+  border-color: #0071e3;
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(29, 29, 31, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 113, 227, 0.15);
 }
 
 .stat-icon {
@@ -617,6 +617,7 @@
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding: 0 10px;
   }
 
   .stat-item {
@@ -740,6 +741,7 @@
 
   .stats-grid {
     gap: 15px;
+    padding: 0;
   }
 
   .stat-item {

@@ -58,7 +58,8 @@
 .carousel-container {
   position: relative;
   height: 400px;
-  overflow: hidden;
+  /* Ensure visible if only one slide */
+  overflow: visible;
 }
 
 /* Testimonial Slides */
@@ -86,6 +87,13 @@
 .testimonial-slide.next {
   opacity: 0;
   transform: translateX(100%);
+}
+
+/* Force visibility for single item - critical fix */
+.testimonial-slide:first-child:last-child {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  position: relative !important;
 }
 
 /* Testimonial Cards */
@@ -257,15 +265,15 @@
   .carousel-container {
     height: 380px;
   }
-  
+
   .testimonial-card {
     padding: 35px 25px;
   }
-  
+
   .section-title {
     font-size: 42px;
   }
-  
+
   .section-description {
     font-size: 16px;
   }
@@ -275,48 +283,48 @@
   .testimonials-section {
     padding: 80px 0;
   }
-  
+
   .section-title {
     font-size: 36px;
   }
-  
+
   .section-description {
     font-size: 15px;
   }
-  
+
   .carousel-container {
     height: 350px;
   }
-  
+
   .testimonial-card {
     padding: 30px 20px;
   }
-  
+
   .testimonial-text {
     font-size: 15px;
   }
-  
+
   .author-avatar {
     width: 48px;
     height: 48px;
   }
-  
+
   .avatar-fallback {
     font-size: 16px;
   }
-  
+
   .author-name {
     font-size: 15px;
   }
-  
+
   .author-role {
     font-size: 13px;
   }
-  
+
   .star {
     font-size: 16px;
   }
-  
+
   .nav-btn {
     width: 40px;
     height: 40px;
@@ -327,48 +335,48 @@
   .container {
     padding: 0 16px;
   }
-  
+
   .section-title {
     font-size: 32px;
   }
-  
+
   .section-description {
     font-size: 14px;
   }
-  
+
   .carousel-container {
     height: 320px;
   }
-  
+
   .testimonial-card {
     padding: 25px 18px;
   }
-  
+
   .testimonial-text {
     font-size: 14px;
   }
-  
+
   .author-avatar {
     width: 44px;
     height: 44px;
   }
-  
+
   .avatar-fallback {
     font-size: 15px;
   }
-  
+
   .author-name {
     font-size: 14px;
   }
-  
+
   .author-role {
     font-size: 12px;
   }
-  
+
   .star {
     font-size: 14px;
   }
-  
+
   .nav-btn {
     width: 36px;
     height: 36px;
@@ -379,48 +387,48 @@
   .container {
     padding: 0 12px;
   }
-  
+
   .section-title {
     font-size: 28px;
   }
-  
+
   .section-description {
     font-size: 13px;
   }
-  
+
   .carousel-container {
     height: 300px;
   }
-  
+
   .testimonial-card {
     padding: 20px 16px;
   }
-  
+
   .testimonial-text {
     font-size: 13px;
   }
-  
+
   .author-avatar {
     width: 40px;
     height: 40px;
   }
-  
+
   .avatar-fallback {
     font-size: 14px;
   }
-  
+
   .author-name {
     font-size: 13px;
   }
-  
+
   .author-role {
     font-size: 11px;
   }
-  
+
   .star {
     font-size: 13px;
   }
-  
+
   .nav-btn {
     width: 32px;
     height: 32px;
