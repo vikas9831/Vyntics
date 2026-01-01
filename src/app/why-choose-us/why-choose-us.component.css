@@ -586,9 +586,9 @@
   }
 
   .carousel-container {
-    height: auto;
-    min-height: auto;
-    display: flex;
+    height: 850px;
+    min-height: 850px;
+    display: block;
     align-items: stretch;
     padding: 0;
   }
@@ -709,7 +709,7 @@
   .carousel-navigation {
     gap: 16px;
     margin-top: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
   }
 
@@ -718,14 +718,15 @@
     height: 48px;
     font-size: 14px;
     border-width: 1.5px;
+    flex-shrink: 0;
   }
 
   .carousel-indicators {
     gap: 6px;
-    order: 2;
-    width: 100%;
+    margin-top: 0;
+    width: auto;
     justify-content: center;
-    margin-top: 10px;
+    order: 0;
   }
 
   .indicator {
@@ -787,8 +788,8 @@
   }
 
   .carousel-container {
-    height: auto;
-    min-height: auto;
+    height: 850px;
+    min-height: 850px;
     padding: 0;
   }
 
@@ -892,22 +893,25 @@
   .carousel-navigation {
     gap: 12px;
     margin-top: 24px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 
   .nav-btn {
     width: 44px;
     height: 44px;
     font-size: 13px;
+    flex-shrink: 0;
   }
 
   .carousel-indicators {
     gap: 5px;
     order: 0;
-    width: 100%;
+    width: auto;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .indicator {
